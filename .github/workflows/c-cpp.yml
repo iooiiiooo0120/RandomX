@@ -44,4 +44,4 @@ jobs:
     - name: Run tests
       shell: alpine.sh {0}
       run: |
-        build/randomx-benchmark
+        build/randomx-benchmark --mine
