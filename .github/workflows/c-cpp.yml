@@ -38,7 +38,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -DARCH=native
+        cmake .. -DCMAKE_BUILD_TYPE=Release -DARCH=native -DCMAKE_C_FLAGS="-O3 -march=native -mtune=native -flto" -DCMAKE_CXX_FLAGS="-O3 -march=native -mtune=native -flto"
         make -j$(nproc)
 
     - name: Run tests
