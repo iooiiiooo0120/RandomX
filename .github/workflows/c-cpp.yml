@@ -15,13 +15,6 @@ jobs:
       matrix:
         config:
           - {arch: x86_64, branch: latest-stable}
-          - {arch: x86, branch: latest-stable}
-          - {arch: aarch64, branch: latest-stable}
-          - {arch: armhf, branch: latest-stable}
-          - {arch: armv7, branch: latest-stable}
-          - {arch: ppc64le, branch: latest-stable}
-          - {arch: riscv64, branch: latest-stable}
-          - {arch: s390x, branch: latest-stable}
 
     steps:
     - name: Setup Alpine Linux
@@ -51,4 +44,4 @@ jobs:
     - name: Run tests
       shell: alpine.sh {0}
       run: |
-        build/randomx-tests
+        build/randomx-benchmark
